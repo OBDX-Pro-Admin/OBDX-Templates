@@ -7,13 +7,20 @@ These examples are for Visual Studio C# for Windows PC using .net framework and 
 ## Contents ##
 
 1. [Getting Started](#GettingStarted)
+
 	1.1 [What is in the Templates?](#WhatsInTheTemplates)
+
 	1.2 [Which Vehicles Work with the Templates?](#WhichVehiclesWork)
+
 	1.3 [Can I use J2534 Commands?](#j2534toOBDX)
 2. [Supported Scantools and Functions](#SupportedScantoolsAndFunctions)
+
 	2.1 [Supported OBD2 Protocols](#SupportedOBD2Protocols)
+
 	2.2 [Protocol Specific Commands](#protocolspecificcommands)
+
 	2.3 [Custom OBDX DLL/Nuget](#customobdxdll)
+
 3. [Issues and Support](#IssuesAndSupport)
 4. [Common Questions and Answers](#CommonQandA)
 
