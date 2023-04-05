@@ -2,7 +2,9 @@
 
 The purpose of this repository is to provide developers with working examples and template projects to get started quickly with OBDX scantools.
 
-These examples are for Visual Studio C# for Windows PC using .net framework and also MAUI using .NetCore. We will also be looking into creating examples for native Android and iOS in the future.
+These examples are for Visual Studio C# for Windows PC using .net framework and also MAUI using .NetCore.
+
+We will also be looking into creating examples for native Android and iOS in the future.
 
 ## Contents ##
 
@@ -28,6 +30,7 @@ These examples are for Visual Studio C# for Windows PC using .net framework and 
 - - - -
 - - - -
  
+
 
 <a name="GettingStarted"></a>
 ## 1. Getting Started ##
