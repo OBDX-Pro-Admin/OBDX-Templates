@@ -20,9 +20,10 @@ These examples are for Visual Studio C# for Windows PC using .net framework and 
 	2.2 [Protocol Specific Commands](#protocolspecificcommands)
 
 	2.3 [Custom OBDX DLL/Nuget](#customobdxdll)
+3. [Development Roadmap](#RoadMap)
 
-3. [Issues and Support](#IssuesAndSupport)
-4. [Common Questions and Answers](#CommonQandA)
+4. [Issues and Support](#IssuesAndSupport)
+5. [Common Questions and Answers](#CommonQandA)
 
 - - - -
 - - - -
@@ -97,8 +98,25 @@ For developers looking to modify or create their own versions of the OBDX DLL/Nu
 - - - -
 - - - -
 
+<a name="RoadMap"></a>
+## 3. Development Roadmap ##
+There are a heap of examples and demonstrations we would like to make or further expand on our templates.
+
+Current items in progress include:
+- Initial OBDX MAUI example release
+- OBDX Windows/Maui template demonstrating VPW/GMLAN/MSCAN OBD protocol implementations
+- OBDX Windows/Maui J2534 template
+- Add additional connection types for both windows/maui (Usb, Classic Bluetooth, Wifi)
+- Working example to connect to a FCA (Jeep/Chrysler/Fiat), Ford, Toyota and other manufacture ECUs.
+- Advanced scantool control for periodic messages, and auto search/send functionality
+
+If there is something specific you would like to see, please contact us!
+
+- - - -
+- - - -
+
 <a name="IssuesAndSupport"></a>
-## 3. Issues and Support ##
+## 4. Issues and Support ##
 If you come across an issue while using the templates, please open an issue in github so we can try replicate the issue on our end. Do ensure to include exactly what scantool you are using and what ECU/Vehicle/OBD2 protocol you are also using.
 
 Our OBDX library does have a option to enable debugging, this will print out information to the console log which will help trace back any possible issues that may occur within the DLL, we will ask to have a log provided to trace any issues.
@@ -107,7 +125,7 @@ Our OBDX library does have a option to enable debugging, this will print out inf
 - - - -
 
 <a name="CommonQandA"></a>
-## 4. Common Questions and Answers ##
+## 5. Common Questions and Answers ##
 **Q: Can we use the templates in commercial products?**
 
 A: You absolutely can! The purpose of these tempaltes is to give developers a big kickstart with known working examples.
