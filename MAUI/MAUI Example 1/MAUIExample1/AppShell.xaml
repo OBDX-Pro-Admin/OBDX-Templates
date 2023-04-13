@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUIExample1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUIExample1"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar x:FieldModifier="Public"
+            x:Name="TabBarMain">
+        <Tab Title="Home"
+             Icon="home.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:MainPage}"
+                           Route="MainPage" />
+        </Tab>
+        <Tab Title="Settings"
+             Icon="cog.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:SettingsPage}"
+                           Route="SettingsPage" />
+        </Tab>
+        <Tab Title="Debug"
+             Icon="debug.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:DebugPage}"
+                           Route="DebugPage" />
+        </Tab>
+    </TabBar>
+
+
+    <!--
+    // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+           await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
+           await Shell.Current.GoToAsync($"///{nameof(ItemsPage)}");
+           await Shell.Current.GoToAsync($"//NewsPage");
+   
+    // This will push the ItemDetailPage onto the navigation stack
+           await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+    
+    
+        If you would like to navigate to this content you can do so by calling
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+    <TabBar x:FieldModifier="Public"
+            x:Name="TabBarLogin">
+        <Tab Title="Login"
+             Icon="accounts.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:Login}"
+                           Route="Login" />
+        </Tab>
+        <Tab Title="Debug"
+             Icon="debug.png">
+            <ShellContent  ContentTemplate="{DataTemplate local:DebugPage}"
+                           Route="DebugPage" />
+        </Tab>
+    </TabBar>
+
+</Shell>
