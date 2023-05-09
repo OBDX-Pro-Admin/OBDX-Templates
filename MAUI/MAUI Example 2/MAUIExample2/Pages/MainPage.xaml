@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIExample.Templates"
+             x:Class="MAUIExample.MainPage"
+             Title="Home">
+
+
+    <Grid x:Name="GridMysize"
+          VerticalOptions="FillAndExpand"
+          HorizontalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+
+        <StackLayout Orientation="Vertical"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Padding="05,04,5,20"
+                     Spacing="04"
+                     Grid.Row="1">
+
+            <Label Text="Select OBD Protocol"
+                   FontSize="Medium"
+                   Margin="00,20,0,00" />
+
+            <Picker x:Name="DropDownBoxProtocol"
+                    Title="click here to select"
+                    SemanticProperties.Hint="Select OBD2 Protocol"
+                    SelectedIndexChanged="DropDownBoxProtocol_SelectedIndexChanged"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="00,5,00,15"
+                    HeightRequest="45"
+                    BackgroundColor="White"
+                    TextColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>HS CAN (VX/GT/FT)</x:String>
+                        <x:String>MS CAN (FT only)</x:String>
+                        <x:String>GMLAN (GT only)</x:String>
+                        <x:String>VPW (VX/GT only)</x:String>
+                        <x:String>ALDL (VX/GT only)</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Line HorizontalOptions="CenterAndExpand"
+                  BackgroundColor="White"
+                  StrokeThickness="3"
+                  WidthRequest="600" />
+
+            <Editor x:Name="RichTextBoxLog"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    Margin="1,15,1,10"
+                    IsReadOnly="True"
+                    >
+            </Editor>
+
+                <Button x:Name="ConnectVehicleButton"
+                    Text="Connect to Scantool!"
+                    SemanticProperties.Hint="Connects to Scantool and Detects vehicle"
+                    Clicked="ConnectVehicleButton_Clicked"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End"
+                    Padding="0,20,0,20"
+                    Margin="10,10,10,30" />
+
+        </StackLayout>
+
+        <StackLayout x:Name="LayoutUpdateLabel"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Grid.RowSpan="2"
+                     IsVisible="False"
+                     BackgroundColor="#FF0A0A0A">
+            <Grid  HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.30*" />
+                    <RowDefinition Height="0.15*" />
+                    <RowDefinition Height="0.20*" />
+                    <RowDefinition Height="0.35*" />
+                </Grid.RowDefinitions>
+                <ActivityIndicator x:Name="BusyIndicator"
+                                   IsVisible="True"
+                                   IsRunning="True"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Color="White"
+                                   Grid.Row="1" />
+                <Label x:FieldModifier="Public"
+                       x:Name="LabelUpdateInfo"
+                       Text="Searching for Scantools..."
+                       TextColor="White"
+                       FontSize="Title"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Margin="0,0,0,0"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       Grid.Row="2"
+                       IsVisible="true" />
+            </Grid>
+
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>
